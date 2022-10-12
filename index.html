@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>French Horn - My hobby</title>
+    <style>
+      :root {
+        --light-color: rgb(237, 161, 193);
+        --dark-color: rgb(32, 38, 57);
+      }
+
+      body {
+        background: radial-gradient(
+          circle at 7.5% 24%,
+          rgb(237, 161, 193) 0%,
+          rgb(250, 178, 172) 25.5%,
+          rgb(190, 228, 210) 62.3%,
+          rgb(215, 248, 247) 93.8%
+        );
+      }
+
+      .dark-theme-button {
+        display: block;
+        margin: 5px auto;
+        background: var(--dark-color);
+        color: white;
+        font-size: 16px;
+      }
+
+      .dark-theme-button:hover {
+        background: white;
+        color: var(--dark-color);
+      }
+
+      .container {
+        background: white;
+        border-radius: 10px;
+        max-width: 600px;
+        padding: 20px;
+        margin: 20px auto;
+        text-align: center;
+      }
+
+      .horn-intro-image {
+        border-radius: 6px;
+        transition: all 500ms ease-in-out;
+      }
+
+      .horn-intro-image:hover {
+        transform: scale(1.1);
+        filter: contrast(80%);
+      }
+
+      .photo-credit {
+        font-size: 8px;
+        margin: 0;
+        padding: 0;
+      }
+
+      button {
+        border: 1px solid var(--light-color);
+        background: white;
+        border-radius: 6px;
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px 15px;
+      }
+
+      button:hover {
+        background: var(--light-color);
+      }
+
+      img {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      footer {
+        text-align: center;
+        margin: 15px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        transition: all 300ms ease-in-out;
+      }
+
+      .grid img {
+        border-radius: 6px;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .dark {
+        background: linear-gradient(
+          112.1deg,
+          rgb(32, 38, 57) 11.4%,
+          rgb(63, 76, 119) 70.2%
+        );
+        color: var(--light-color);
+      }
+      .dark .container {
+        background: grey;
+        filter: contrast(90%);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="dark-theme-button">Change theme</button>
+    <div class="container">
+      <h1>📯 French Horn</h1>
+      <h2>My favorite hobby</h2>
+
+      <a href="https://en.wikipedia.org/wiki/French_horn" target="_blank">
+        <img src="horn-intro.jpg" class="horn-intro-image"
+      /></a>
+      <p class="photo-credit">Credit Asher Legg</p>
+      <div class="grid">
+        <img src="image1.jpg" />
+        <img src="image2.jpg" />
+        <img src="image3.jpg" />
+        <img src="image4.jpg" />
+      </div>
+      <p>
+        The French horn (since the 1930s known simply as the horn in
+        professional music circles) is a brass instrument made of tubing wrapped
+        into a coil with a flared bell. The double horn in F/B♭ (technically a
+        variety of German horn) is the horn most often used by players in
+        professional orchestras and bands, although the descant and triple horn
+        have become increasingly popular. A musician who plays a horn is known
+        as a horn player or hornist.
+      </p>
+      <p>
+        📖
+        <a href="https://en.wikipedia.org/wiki/French_horn"
+          >Read on Wikipedia</a
+        >
+      </p>
+      <button>Learn to play horn</button>
+    </div>
+    <footer>
+      Coded with 💜 by
+      <a href="https://github.com/carolinedam">Caroline D'Ambro</a>
+    </footer>
+    <script>
+      function changeTheme() {
+        let theme = document.querySelector("body");
+        theme.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".dark-theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
