@@ -27,6 +27,7 @@
         background: var(--dark-color);
         color: white;
         font-size: 16px;
+        padding: 15px 35px;
       }
 
       .dark-theme-button:hover {
@@ -62,10 +63,15 @@
       button {
         border: 1px solid var(--light-color);
         background: white;
-        border-radius: 6px;
+        border-radius: 20px;
         font-size: 20px;
         margin: 10px;
         padding: 10px 15px;
+      }
+
+      button a {
+        text-decoration: none;
+        color: var(--dark-color);
       }
 
       button:hover {
@@ -123,14 +129,14 @@
       <h2>My favorite hobby</h2>
 
       <a href="https://en.wikipedia.org/wiki/French_horn" target="_blank">
-        <img src="horn-intro.jpg" class="horn-intro-image"
+        <img src="images/horn-intro.jpg" class="horn-intro-image"
       /></a>
       <p class="photo-credit">Credit Asher Legg</p>
       <div class="grid">
-        <img src="image1.jpg" />
-        <img src="image2.jpg" />
-        <img src="image3.jpg" />
-        <img src="image4.jpg" />
+        <img src="images/image1.jpg" />
+        <img src="images/image2.jpg" />
+        <img src="images/image3.jpg" />
+        <img src="images/image4.jpg" />
       </div>
       <p>
         The French horn (since the 1930s known simply as the horn in
@@ -147,7 +153,9 @@
           >Read on Wikipedia</a
         >
       </p>
-      <button>Learn to play horn</button>
+      <button>
+        <a href="mailto:caroline@gmail.com">Learn to play horn</a>
+      </button>
     </div>
     <footer>
       Coded with 💜 by
